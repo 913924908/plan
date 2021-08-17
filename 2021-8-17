@@ -1,0 +1,23 @@
+kafka
+  quick start 
+  framework
+    producer
+    broker
+      topic+partition
+        topic+partition定位到一个queue
+    consumer
+      group
+        一个consumer group消费一个topic的所有partition
+        topic的一个partition只能被group的一个consumer消费
+  build cluster
+  java_api
+    producer
+      KafkaProducer<String, String> producer = new KafkaProducer<>(conf_props)
+      producer.send(new ProducerRecord<String, String>(topic_name,key,val))
+    consumer
+      KafkaConsumer<String, String> consumer = new KafkaConsumer<>(conf_props)
+        conf_props
+      consumer.subscribe(topic_list)
+      consumer.poll(100)
+react
+  
